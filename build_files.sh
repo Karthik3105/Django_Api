@@ -11,9 +11,6 @@ else
     echo "Python3 is already installed."
 fi
 
-# Install system dependencies
-echo "Installing system dependencies..."
-apt-get install -y libc-dev libsqlite3-dev
 
 # Use pip3 if pip is not available
 pip_cmd=$(command -v pip || command -v pip3)
