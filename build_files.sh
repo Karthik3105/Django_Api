@@ -21,9 +21,9 @@ echo "Installing dependencies..."
 $pip_cmd install -r requirements.txt || { echo "Dependency installation failed"; exit 1; }
 
 # Run database migrations
-# echo "Running database migrations..."
-# python3 manage.py makemigrations || { echo "Makemigrations failed"; exit 1; }
-# python3 manage.py migrate || { echo "Migration failed"; exit 1; }
+echo "Running database migrations..."
+python3 manage.py makemigrations || { echo "Makemigrations failed"; exit 1; }
+python3 manage.py migrate || { echo "Migration failed"; exit 1; }
 
 # Set the STATIC_ROOT directory to match Vercel's expected output
 export STATIC_ROOT=staticfiles_build
