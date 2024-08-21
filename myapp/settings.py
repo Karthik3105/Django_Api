@@ -87,11 +87,14 @@ WSGI_APPLICATION = 'myapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'your_db_name',
-        'USER': 'your_db_user',
-        'PASSWORD': 'your_db_password',
-        'HOST': 'your_db_host',
-        'PORT': 'your_db_port',
+        'NAME': 'postgres',
+        'USER': 'postgres.glhfgjxubulmpuvecvxd',
+        'PASSWORD': '8LJq9N-WR.p#Bnk',
+        'HOST': 'aws-0-ap-southeast-1.pooler.supabase.com',  # Use 'localhost' if running PostgreSQL locally
+        'PORT': '6543',  # Default is '5432'
+        'OPTIONS': {
+            'options': '-c timezone=UTC',
+        },
     }
 }
 
